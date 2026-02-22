@@ -1,7 +1,7 @@
 # Барьеры
 - type: entity
   parent: BaseStructure
-  id: EchoShelterBarbedwire #PE-Tweak Было: ADTEchoShelterConcreteBarrier -> Стало: EchoShelterConcreteBarrier
+  id: EchoShelterBarbedwire #PE-Tweak Было: ADTShelterConcreteBarrier -> Стало: EchoShelterConcreteBarrier
   name: barbed wire
   description: Barbed wire. Hurts to touch, but not to look.
   components:
@@ -36,7 +36,7 @@
 
 - type: entity
   parent: BaseStructure
-  id: EchoShelterConcreteBarrier #PE-Tweak Было: ADTEchoShelterConcreteBarrier -> Стало: EchoShelterConcreteBarrier
+  id: EchoShelterConcreteBarrier #PE-Tweak Было: ADTShelterConcreteBarrier -> Стало: EchoShelterConcreteBarrier
   name: concrete barrier
   description: Not very strong, but very heavy concrete barrier.
   components:
