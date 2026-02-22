@@ -14,6 +14,7 @@
   - type: StationAiWhitelist
   - type: Sprite
     sprite: Structures/Doors/Shutters/shutters.rsi
+    snapCardinals: true # PE-Tweak fix of wielding animation
     drawdepth: BlastDoors
     layers:
     - state: closed
