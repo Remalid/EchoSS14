@@ -651,9 +651,9 @@ binds:
   type: State
   key: MouseRight
   canFocus: true
-# ECHO Tweak start
+# PE-Tweak-Start
 # Оффер апдейт
 - function: OfferItem
   type: State
   key: F
-# ECHO Tweak start
+# PE-Tweak-End
