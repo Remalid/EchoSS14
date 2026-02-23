@@ -1,12 +1,12 @@
 # Барьеры
 - type: entity
   parent: BaseStructure
-  id: EchoShelterBarbedwire #PE-Tweak Было: ADTShelterConcreteBarrier -> Стало: EchoShelterConcreteBarrier
+  id: EchoShelterBarbedwire 
   name: barbed wire
   description: Barbed wire. Hurts to touch, but not to look.
   components:
   - type: Sprite
-    sprite: _ECHO/Structures/Decoration/shelter.rsi #PE-Tweak Было: ADT/Structures/Decoration/shelter.rsi -> Стало: _ECHO/Structures/Decoration/shelter.rsi
+    sprite: _ECHO/Structures/Decoration/shelter.rsi 
     state: barbedwire
   - type: Physics
     bodyType: Static
@@ -36,12 +36,12 @@
 
 - type: entity
   parent: BaseStructure
-  id: EchoShelterConcreteBarrier #PE-Tweak Было: ADTShelterConcreteBarrier -> Стало: EchoShelterConcreteBarrier
+  id: EchoShelterConcreteBarrier 
   name: concrete barrier
   description: Not very strong, but very heavy concrete barrier.
   components:
   - type: Sprite
-    sprite: _ECHO/Structures/Decoration/shelter.rsi #PE-Tweak Было: ADT/Structures/Decoration/shelter.rsi -> Стало: _ECHO/Structures/Decoration/shelter.rsi
+    sprite: _ECHO/Structures/Decoration/shelter.rsi 
     state: concrete_barrier
   - type: Physics
     bodyType: Static
@@ -71,33 +71,33 @@
 
 - type: entity
   parent: EchoShelterConcreteBarrier
-  id: EchoShelterConcreteBarrier2 #PE-Tweak Было: ADTShelterConcreteBarrier2 -> Стало: EchoShelterConcreteBarrier2
+  id: EchoShelterConcreteBarrier2 
   components:
   - type: Sprite
     state: concrete_barrier-2
 
 - type: entity
   parent: EchoShelterConcreteBarrier
-  id: EchoShelterConcreteBarrier3 #PE-Tweak Было: ADTShelterConcreteBarrier3 -> Стало: EchoShelterConcreteBarrier3
+  id: EchoShelterConcreteBarrier3 
   components:
   - type: Sprite
     state: concrete_barrier-3
 
 - type: entity
   parent: EchoShelterConcreteBarrier
-  id: EchoShelterConcreteBarrierAlt #PE-Tweak Было: ADTShelterConcreteBarrierAlt -> Стало: EchoShelterConcreteBarrierAlt
+  id: EchoShelterConcreteBarrierAlt 
   components:
   - type: Sprite
     state: concrete_barrier_alt
 
 - type: entity
   parent: BaseStructure
-  id: EchoShelterRoadBarrier #PE-Tweak Было: ADTShelterSandbag -> Стало: EchoShelterRoadBarrier
+  id: EchoShelterRoadBarrier 
   name: road barrier
   description: Road barrier!
   components:
   - type: Sprite
-    sprite: _ECHO/Structures/Decoration/shelter.rsi #PE-Tweak Было: ADT/Structures/Decoration/shelter.rsi -> Стало: _ECHO/Structures/Decoration/shelter.rsi
+    sprite: _ECHO/Structures/Decoration/shelter.rsi 
     state: road_barrier
   - type: Physics
     bodyType: Static
@@ -128,12 +128,12 @@
 # Мешки с песком
 - type: entity
   parent: BaseStructure
-  id: EchoShelterSandbag #PE-Tweak Было: ADTShelterSandbag -> Стало: EchoShelterSandbag
+  id: EchoShelterSandbag 
   name: sandbag
   description: Sandbag for cover and protection. Destroys on damage.
   components:
   - type: Sprite
-    sprite: _ECHO/Structures/Decoration/sandbag.rsi #PE-Tweak Было:  ADT/Structures/Decoration/sandbag.rsi -> Стало: _ECHO/Structures/Decoration/sandbag.rsi
+    sprite: _ECHO/Structures/Decoration/sandbag.rsi 
     state: sandbag
   - type: Physics
     bodyType: Static
@@ -166,5 +166,5 @@
     damageDivisor: 1
     trackAllDamage: true
     damageOverlay:
-      sprite: _ECHO/Structures/Decoration/sandbag.rsi #PE-Tweak Было: ADT/Structures/Decoration/sandbag.rsi -> Стало: _ECHO/Structures/sandbag/sandbag.rsi
+      sprite: _ECHO/Structures/Decoration/sandbag.rsi 
 
