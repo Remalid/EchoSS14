@@ -2,7 +2,7 @@ offer-item-empty-hand = У вас в руках ничего нет!
 
 offer-item-full-hand = Ваши руки заняты!
 
-offer-item-try-give = Вы предлагаете {THE($item)}  {$target}
+offer-item-try-give = Вы предлагаете {THE($item)} {$target}
 offer-item-try-give-target = {$user} предлагает вам {THE($item)}
 
 offer-item-give = Вы отдали {THE($item)}  {$target}
