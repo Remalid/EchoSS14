@@ -14,5 +14,5 @@ ent-EchoGoldPhone = золотой телефон
 ent-EchoDesktopClock = настольные часы
     .desc = Сколько ещё ждать до окончания смены?...
 
-ent-EchoDesktopTableCaptain = настольная табличка "Капитан"
+ent-EchoDesktopTableAdministrator = настольная табличка "Администратор"
     .desc = I'M THE BOSS!

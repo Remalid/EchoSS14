@@ -87,9 +87,9 @@
   - type: Anchorable
 
 - type: entity
-  id: EchoDesktopTableCaptain
+  id: EchoDesktopTableAdministrator
   parent: BaseItem
-  name: desk plaque "Captain"
+  name: desk plaque "Administrator"
   description: I'M THE BOSS!
   components:
   - type: Sprite
