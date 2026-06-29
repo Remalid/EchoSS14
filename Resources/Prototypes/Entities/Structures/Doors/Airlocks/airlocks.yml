@@ -14,7 +14,7 @@
   suffix: Engineering
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/engineering.rsi
+    sprite: _ECHO/Structures/Doors/Airlocks/Standard/engineering.rsi # ECHO-TWEAK
   - type: Wires
     layoutId: AirlockEngineering
 

@@ -17,7 +17,7 @@
   - type: InteractionOutline
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/basic.rsi
-    snapCardinals: true
+    snapCardinals: false # ECH0-TWEAK Resprite
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -71,6 +71,8 @@
   - type: AccessReader
     containerAccessProvider: board
   - type: Door
+    closeTimeTwo: 0.59 # ECHO-Tweak
+    openTimeTwo: 0.59 # ECHO-Tweak
     crushDamage:
       types:
         Blunt: 15
@@ -178,6 +180,7 @@
       # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
       - DoorRemoteWhitelist
       # This tag is used by door remotes to allow or not a door remote to normally be able to interact with a door
+      - ForceNoFixRotations # ECHO-Tweak
   - type: PryUnpowered
   - type: BlockWeather
   - type: GuideHelp
