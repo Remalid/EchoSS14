@@ -23,4 +23,4 @@
   - type: Sprite
     sprite: _ECHO/Structures/Doors/Airlocks/Standard/service.rsi
   - type: Wires
-    layoutId: EchoAirlockSerivce
+    layoutId: AirlockSerivce
