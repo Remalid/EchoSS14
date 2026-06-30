@@ -29,7 +29,7 @@
       fx: EffectRCDDeconstruct6
     - type: Tag
       tags:
-      - ForceFixRotations # Allow fixrotations to target these
+      - ForceNoFixRotations # Allow fixrotations to target these
     - type: Destructible
       thresholds:
       - trigger:
@@ -40,7 +40,7 @@
           acts: ["Destruction"]
     - type: Sprite
       sprite: Structures/Doors/Airlocks/Standard/firelock.rsi
-      snapCardinals: true
+      snapCardinals: false # ECHO-TWEAK
       layers:
         - state: closed
           map: ["enum.DoorVisualLayers.Base"]
@@ -157,6 +157,8 @@
   id: Firelock
   parent: BaseFirelock
   components:
+  - type: Sprite
+    sprite: _ECHO/Structures/Doors/Airlocks/Standard/firelock.rsi # ECHO-TWEAK
   - type: StationAiWhitelist
   - type: ContainerContainer
     containers:
