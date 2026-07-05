@@ -89,6 +89,8 @@
     fuel: 5
     time: 3
   - type: Airlock
+    openUnlitVisible: true    # ECHO-Tweak: свет при закрытых и открытых шлюзах
+    closedUnlitVisible: true  # ECHO-Tweak: свет при закрытых и открытых шлюзах
   - type: NavMapDoor
   - type: DoorBolt
   - type: Appearance
@@ -188,7 +190,7 @@
     - Airlocks
     - WirePanels
     - Networking
-# ECHO-Tweak-Start 
+# ECHO-Tweak-Start
   - type: WeldingSparksAnimation # ECHO-Tweak "Wielding Sparks Animation"
     startingOffset: 0, 0.5
 # ECHO-Tweak-End

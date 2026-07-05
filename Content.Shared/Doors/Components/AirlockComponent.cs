@@ -24,7 +24,7 @@ public sealed partial class AirlockComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public bool EmergencyAccess = false;
-	
+
     /// <summary>
     /// Sound to play when the airlock emergency access is turned on.
     /// </summary>
@@ -159,4 +159,10 @@ public sealed partial class AirlockComponent : Component
     public float BoltedPryModifier = 3f;
 
     #endregion Graphics
+
+    // ECHO-Tweak-start
+    // Unlit lights
+    [DataField]
+    public bool ClosedUnlitVisible = false;
+    // ECHO-Tweak-end
 }
