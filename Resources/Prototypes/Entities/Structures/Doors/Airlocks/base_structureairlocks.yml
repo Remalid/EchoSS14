@@ -17,7 +17,7 @@
   - type: InteractionOutline
   - type: Sprite
     sprite: _ECHO/Structures/Doors/Airlocks/Standard/basic.rsi # ECHO-TWEAK Было: Structures/Doors/Airlocks/Standard/basic.rsi -> Стало: _ECHO/Structures/Doors/Airlocks/Standard/basic.rsi
-    snapCardinals: false # ECH0-TWEAK Resprite
+    snapCardinals: false # ECH0-TWEAK Для корректной работы направлений
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -71,8 +71,8 @@
   - type: AccessReader
     containerAccessProvider: board
   - type: Door
-    closeTimeTwo: 0.59 # ECHO-Tweak
-    openTimeTwo: 0.59 # ECHO-Tweak
+    closeTimeTwo: 0.59 # ECHO-Tweak For syncing w/ animation
+    openTimeTwo: 0.59 # ECHO-Tweak For syncing w/ animation
     crushDamage:
       types:
         Blunt: 15
@@ -182,7 +182,7 @@
       # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
       - DoorRemoteWhitelist
       # This tag is used by door remotes to allow or not a door remote to normally be able to interact with a door
-      - ForceNoFixRotations # ECHO-Tweak
+      - ForceNoFixRotations # ECHO-Tweak Для корректной работы направлений
   - type: PryUnpowered
   - type: BlockWeather
   - type: GuideHelp
