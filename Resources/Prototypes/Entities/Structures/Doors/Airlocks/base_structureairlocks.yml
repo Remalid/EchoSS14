@@ -216,6 +216,9 @@
         collection: GlassSmack
   - type: Door
     occludes: false
+  - type: Airlock
+    openUnlitVisible: false # ECHO-Tweak: Стеклянным шлюзам true пока что не нужен
+    closedUnlitVisible: false # ECHO-Tweak: Стеклянным шлюзам true пока что не нужен
   - type: Occluder
     enabled: false
   - type: Sprite
