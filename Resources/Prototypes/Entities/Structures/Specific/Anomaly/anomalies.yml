@@ -75,8 +75,7 @@
     supercriticalSoundAtAnimationStart:
       collection: AnomalyPyroSupercritical
   - type: Sprite
-    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/fire_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_fire
-    .rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/fire_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi
     layers:
     - state: shadow-anomaly
       shader: unshaded
