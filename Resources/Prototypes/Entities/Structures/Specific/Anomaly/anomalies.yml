@@ -75,13 +75,18 @@
     supercriticalSoundAtAnimationStart:
       collection: AnomalyPyroSupercritical
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/pyro_anom.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/fire_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_fire
+    .rsi
     layers:
-    - state: anom
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-TWEAK END
   - type: PointLight
     radius: 6.0
     energy: 7.5
@@ -130,12 +135,17 @@
       collection: AnomalyGravitySupercritical
     supercriticalDuration: 15s
   - type: Sprite
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_gravity.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/gravity_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_gravity.rsi
     layers:
-    - state: anom2
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom2-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-TWEAK END
   - type: PointLight
     radius: 5.0
     energy: 20
@@ -164,12 +174,17 @@
     supercriticalSoundAtAnimationStart:
       collection: AnomalyElectricitySupercritical
   - type: Sprite
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_electric.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/electric_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_electric.rsi
     layers:
-    - state: anom3
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom3-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-TWEAK END
   - type: PointLight
     radius: 2.0
     energy: 5.0
@@ -191,12 +206,17 @@
     supercriticalSoundAtAnimationStart:
       collection: AnomalyFleshSupercritical
   - type: Sprite
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_flesh.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/flesh_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_flesh.rsi
     layers:
-    - state: anom5
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom5-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-TWEAK END
   - type: PointLight
     radius: 2.0
     energy: 7.5
@@ -279,12 +299,17 @@
   suffix: Bluespace
   components:
   - type: Sprite
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_bluespace.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/bluespace_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_bluespace.rsi
     layers:
-    - state: anom4
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom4-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-TWEAK END
   - type: PointLight
     radius: 2.0
     energy: 7.5
@@ -328,13 +353,17 @@
   suffix: Ice
   components:
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/ice_anom.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_ice.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/ice_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_ice.rsi
     layers:
-    - state: anom
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-TWEAK END
   - type: PointLight
     radius: 2.0
     energy: 2.5
@@ -875,13 +904,17 @@
   suffix: Liquid
   components:
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/liquid_anom.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_liquid.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/liquid_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_liquid.rsi
     layers:
+    - state: shadow-anomaly
+      shader: unshaded
     - state: anom
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-TWEAK END
   - type: RandomSprite
     selected: # Initialized layer values. Edited through the ReagentProducerAnomalySystem
       enum.AnomalyVisualLayers.Base:
@@ -995,13 +1028,17 @@
   suffix: Shadow
   components:
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/shadow_anom.rsi
-    layers:
-    - state: anom
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_shadow.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/shadow_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_shadow.rsi
+    layers: # ECHO-TWEAK START
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-TWEAK END
   - type: PointLight
     radius: 1.5
     energy: 12.5
