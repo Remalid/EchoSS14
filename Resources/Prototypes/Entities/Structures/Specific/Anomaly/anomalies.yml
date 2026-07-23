@@ -74,9 +74,9 @@
     coreInertPrototype: AnomalyCorePyroclasticInert
     supercriticalSoundAtAnimationStart:
       collection: AnomalyPyroSupercritical
-  # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/fire_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi
+  # ECHO-TWEAK START
   - type: Sprite
-    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi # New path + New states Было: Structures/Specific/Anomalies/fire_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi
     layers:
     - state: shadow-anomaly
       shader: unshaded
@@ -912,8 +912,9 @@
   parent: BaseAnomaly
   suffix: Liquid
   components:
+  # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/liquid_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_liquid.rsi
   - type: Sprite
-    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_liquid.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/liquid_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_liquid.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_liquid.rsi
     layers:
     - state: shadow-anomaly
       shader: unshaded
@@ -923,7 +924,8 @@
     - state: pulse
       shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false # ECHO-TWEAK END
+      visible: false 
+  # ECHO-TWEAK END
   - type: RandomSprite
     selected: # Initialized layer values. Edited through the ReagentProducerAnomalySystem
       enum.AnomalyVisualLayers.Base:
@@ -1036,8 +1038,9 @@
   parent: BaseAnomaly
   suffix: Shadow
   components:
+  # ECHO-TWEAK START 
   - type: Sprite
-    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_shadow.rsi # ECHO-TWEAK START New path + New states Было: Structures/Specific/Anomalies/shadow_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_shadow.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_shadow.rsi # New path + New states Было: Structures/Specific/Anomalies/shadow_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_shadow.rsi
     layers: 
     - state: shadow-anomaly
       shader: unshaded
@@ -1047,7 +1050,8 @@
     - state: pulse
       shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false # ECHO-TWEAK END
+      visible: false 
+  # ECHO-TWEAK END
   - type: PointLight
     radius: 1.5
     energy: 12.5
