@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [SolutionFood, SolutionToolSmall, Clothing]
   id: ClothingHeadBase
   components:
   - type: Clothing
@@ -13,13 +13,11 @@
     storedRotation: -90
   - type: Edible
     requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 15
   - type: Tag
     tags:
     - ClothMade
@@ -27,14 +25,12 @@
 
 - type: entity
   abstract: true
-  parent: ClothingHeadBase
+  parent: [ClothingHeadBase, BaseSlicingRefinable]
   id: ClothingHeadBaseButcherable
   components:
-  - type: Butcherable
-    butcheringType: Knife
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: MaterialCloth1
-      amount: 1
   - type: PhysicalComposition # 50% of the amount of cloth you'd obtain upon butchering
     materialComposition:
       Cloth: 50
@@ -61,15 +57,15 @@
     equippedPrefix: off
   - type: Item
     heldPrefix: off
-    size: Normal
+    size: Normal # I'm not updating the solution because these probably shouldn't be edible...
   - type: ToggleableVisuals
     spriteLayer: light
   - type: ItemTogglePointLight
   - type: PointLight
     enabled: false
-    radius: 3
+    radius: 7 # ECHO-Tweak: 3 -> 7
     energy: 1
-    mask: /Textures/Effects/LightMasks/cone.png
+    mask: /Textures/_ECHO/Effects/LightMasks/cone_composed_b.png  # ECHO-Tweak: /Textures/Effects/LightMasks/cone.png -> /Textures/_ECHO/Effects/LightMasks/cone_composed_b.png
     autoRot: true
     netsync: false
   - type: Appearance
@@ -216,9 +212,9 @@
   - type: ItemTogglePointLight
   - type: PointLight
     enabled: false
-    radius: 3
+    radius: 6 # ECHO-Tweak: 3 -> 6
     energy: 2
-    mask: /Textures/Effects/LightMasks/cone.png
+    mask: /Textures/_ECHO/Effects/LightMasks/cone_composed_b.png  # ECHO-Tweak: /Textures/Effects/LightMasks/cone.png -> /Textures/_ECHO/Effects/LightMasks/cone_composed_b.png
     autoRot: true
     netsync: false
   - type: Appearance
