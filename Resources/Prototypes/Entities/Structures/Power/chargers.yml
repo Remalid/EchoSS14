@@ -21,12 +21,6 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 80
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-    - trigger:
-        !type:DamageTrigger
         damage: 40
       behaviors:
       - !type:EmptyAllContainersBehaviour
@@ -111,6 +105,9 @@
         blacklist:
           tags:
           - PotatoBattery
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
 
 - type: entity
   parent: [ BaseItemRecharger, ConstructibleMachine ]
@@ -134,6 +131,7 @@
     radius: 1.5
     color: "#03fc4e"
     energy: 0.7
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_a.png # ECHO-Tweak: добавлена маска света
   - type: Charger
     chargeRate: 50
   - type: Sprite
@@ -175,6 +173,9 @@
         blacklist:
           tags:
           - PotatoBattery
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
 
 - type: entity
   parent: BaseItemRecharger
@@ -200,6 +201,9 @@
         blacklist:
           tags:
           - PotatoBattery
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
 
 - type: entity
   parent: [ BaseItemRecharger, BaseWallmount ]

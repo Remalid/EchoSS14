@@ -37,7 +37,6 @@
     sprite: Structures/Specific/anomaly.rsi
   - type: InteractionOutline
   - type: Clickable
-  - type: Damageable
   - type: Appearance
   - type: AnimationPlayer
   - type: GuideHelp
@@ -74,19 +73,26 @@
     coreInertPrototype: AnomalyCorePyroclasticInert
     supercriticalSoundAtAnimationStart:
       collection: AnomalyPyroSupercritical
+  # ECHO-Tweak-Start
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/pyro_anom.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi # New path + New states Было: Structures/Specific/Anomalies/fire_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_fire.rsi
     layers:
-    - state: anom
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false 
+  # ECHO-Tweak-End
   - type: PointLight
     radius: 6.0
     energy: 7.5
     color: "#E25822"
     castShadows: false
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_a.png # ECHO-Tweak: добавлена маска света
   - type: PyroclasticAnomaly
   - type: TempAffectingAnomaly
     tempChangePerSecond: 25
@@ -129,18 +135,26 @@
     supercriticalSoundAtAnimationStart:
       collection: AnomalyGravitySupercritical
     supercriticalDuration: 15s
+  # ECHO-Tweak-Start 
   - type: Sprite
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_gravity.rsi # New path + New states Было: Structures/Specific/Anomalies/gravity_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_gravity.rsi 
     layers:
-    - state: anom2
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom2-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false 
+  # ECHO-Tweak-End
   - type: PointLight
     radius: 5.0
     energy: 20
     color: "#1e070e"
     castShadows: false
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_a.png # ECHO-Tweak: добавлена маска света
   - type: GravityAnomaly
   - type: GravityWell
   - type: RadiationSource
@@ -163,18 +177,26 @@
     coreInertPrototype: AnomalyCoreElectricityInert
     supercriticalSoundAtAnimationStart:
       collection: AnomalyElectricitySupercritical
+  # ECHO-Tweak-Start 
   - type: Sprite
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_electric.rsi # New path + New states Было: Structures/Specific/Anomalies/electric_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_electric.rsi
     layers:
-    - state: anom3
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom3-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false 
+  # ECHO-Tweak-End
   - type: PointLight
     radius: 2.0
     energy: 5.0
     color: "#ffffaa"
     castShadows: false
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_a.png # ECHO-Tweak: добавлена маска света
   - type: ElectricityAnomaly
   - type: Electrified
 
@@ -190,18 +212,26 @@
     maxPulseLength: 300
     supercriticalSoundAtAnimationStart:
       collection: AnomalyFleshSupercritical
+  # ECHO-Tweak-Start 
   - type: Sprite
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_flesh.rsi # New path + New states Было: Structures/Specific/Anomalies/flesh_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_flesh.rsi
     layers:
-    - state: anom5
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom5-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false 
+  # ECHO-Tweak-End
   - type: PointLight
     radius: 2.0
     energy: 7.5
     color: "#cb5b7e"
     castShadows: false
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_a.png # ECHO-Tweak: добавлена маска света
   - type: TileSpawnAnomaly
     entries:
     - settings:
@@ -279,17 +309,23 @@
   suffix: Bluespace
   components:
   - type: Sprite
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_bluespace.rsi
     layers:
-    - state: anom4
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: anom4-pulse
+    - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false # ECHO-Tweak-End
   - type: PointLight
     radius: 2.0
     energy: 7.5
     color: "#00ccff"
     castShadows: false
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_rings.png # ECHO-Tweak: добавлена маска света
   - type: BluespaceAnomaly
   - type: Portal
   - type: Fixtures
@@ -327,14 +363,20 @@
   parent: BaseAnomaly
   suffix: Ice
   components:
+  # ECHO-Tweak-Start 
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/ice_anom.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_ice.rsi # New path + New states Было: Structures/Specific/Anomalies/ice_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_ice.rsi
     layers:
-    - state: anom
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false 
+    # ECHO-Tweak-End
   - type: PointLight
     radius: 2.0
     energy: 2.5
@@ -403,6 +445,7 @@
     energy: 7.5
     color: "#5ca8cb"
     castShadows: false
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: TileSpawnAnomaly
     entries:
     - settings:
@@ -429,6 +472,7 @@
     radius: 2.0
     energy: 7.5
     color: "#52ff39"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -479,6 +523,7 @@
     radius: 2.0
     energy: 7.5
     color: "#ddde40"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -529,6 +574,7 @@
     radius: 2.0
     energy: 7.5
     color: "#fb4747"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -579,6 +625,7 @@
     radius: 2.0
     energy: 7.5
     color: "#47f8ff"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -629,6 +676,7 @@
     radius: 2.0
     energy: 7.5
     color: "#e3ba70"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -679,6 +727,7 @@
     radius: 2.0
     energy: 7.5
     color: "#ff8227"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -729,6 +778,7 @@
     radius: 2.0
     energy: 7.5
     color: "#484848"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -786,6 +836,7 @@
     radius: 8.0
     energy: 8.5
     color: "#6270bb"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: Anomaly
     animationTime: 6
     offset: 0, 0
@@ -845,25 +896,27 @@
           radius: 0.2
   - type: InteractionOutline
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Diona
+  - type: Injurable
+    damageContainer: Biological
   - type: Destructible
     thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 1
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-          - !type:SpawnEntitiesBehavior
-            spawn:
-              EffectAnomalyFloraBulb:
-                min: 1
-                max: 1
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          EffectAnomalyFloraBulb:
+            min: 1
+            max: 1
   - type: PointLight
     radius: 2.0
     energy: 4.5
     color: "#6270bb"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: Sprite
     noRot: true
     sprite: Structures/Specific/Anomalies/flora_anom.rsi
@@ -874,14 +927,20 @@
   parent: BaseAnomaly
   suffix: Liquid
   components:
+  # ECHO-Tweak-Start 
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/liquid_anom.rsi
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_liquid.rsi # New path + New states Было: Structures/Specific/Anomalies/ice_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_ice.rsi
     layers:
+    - state: shadow-anomaly
+      shader: unshaded
     - state: anom
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false 
+  # ECHO-Tweak-End
   - type: RandomSprite
     selected: # Initialized layer values. Edited through the ReagentProducerAnomalySystem
       enum.AnomalyVisualLayers.Base:
@@ -892,6 +951,7 @@
     radius: 4.0
     energy: 3.5
     color: "#bbbbbb"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: BadFood
   - type: Anomaly
     corePrototype: AnomalyCoreLiquid
@@ -909,10 +969,10 @@
         maxRange: 2
       spawns:
       - ReagentSlimeSpawner
-  - type: SolutionContainerManager
-    solutions:
-      anomaly:
-        maxVol: 1500
+  - type: Solution
+    id: anomaly
+    solution:
+      maxVol: 1550 # Doesn't really matter since it's an anom anyways
   - type: PuddleCreateAnomaly
     solution: anomaly
   - type: InjectionAnomaly
@@ -994,18 +1054,25 @@
   parent: BaseAnomaly
   suffix: Shadow
   components:
+  # ECHO-Tweak-Start 
   - type: Sprite
-    sprite: Structures/Specific/Anomalies/shadow_anom.rsi
-    layers:
-    - state: anom
+    sprite: _ECHO/Structures/Specific/Anomalies/anomaly_shadow.rsi # New path + New states Было: Structures/Specific/Anomalies/shadow_anom.rsi -> Стало: _ECHO/Structures/Specific/Anomalies/anomaly_shadow.rsi
+    layers: 
+    - state: shadow-anomaly
+      shader: unshaded
+    - state: vfx
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Base"]
     - state: pulse
+      shader: unshaded
       map: ["enum.AnomalyVisualLayers.Animated"]
-      visible: false
+      visible: false 
+  # ECHO-Tweak-End
   - type: PointLight
     radius: 1.5
     energy: 12.5
     color: "#793a80"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: AmbientSound
     range: 5
     volume: -5
@@ -1075,6 +1142,7 @@
     radius: 6.5
     energy: 3.5
     color: "#56c1e8"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: Anomaly
     corePrototype: AnomalyCoreTech
     coreInertPrototype: AnomalyCoreTechInert
@@ -1133,6 +1201,7 @@
     radius: 8.0
     energy: 8.5
     color: "#db8127"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: Anomaly
     animationTime: 6
     offset: 0, 0

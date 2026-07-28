@@ -9,9 +9,9 @@ namespace Content.Client._ECHO.Posing;
 
 public sealed partial class PosingSystem : SharedPosingSystem
 {
-    [Dependency] private readonly IInputManager _input = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly SpriteSystem _sprite = default!;
+    [Dependency] private IInputManager _input = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private SpriteSystem _sprite = default!;
 
     private const float OffsetChangeSpeed = 1f;
     private const float RotationChangeSpeed = 15f;
@@ -71,11 +71,14 @@ public sealed partial class PosingSystem : SharedPosingSystem
     {
         base.FrameUpdate(frameTime);
 
-        var query = EntityQueryEnumerator<PosingComponent>();
-        while (query.MoveNext(out var uid, out var posing))
+        var query = EntityQueryEnumerator<PosingComponent, SpriteComponent>();
+        while (query.MoveNext(out var uid, out var posing, out var sprite))
         {
             posing.CurrentOffset = VectorExtensions.MoveTowards(posing.CurrentOffset, posing.DefaultOffset + posing.TargetOffset, frameTime * OffsetChangeSpeed);
             posing.CurrentAngle = AngleExtensions.MoveTowards(posing.CurrentAngle, posing.TargetAngle, frameTime * RotationChangeSpeed);
+
+            if (!posing.Posing && posing.CurrentOffset == posing.DefaultOffset && posing.CurrentAngle == posing.DefaultAngle)
+                continue;
 
             _sprite.SetOffset(uid, posing.CurrentOffset);
             _sprite.SetRotation(uid, posing.CurrentAngle);

@@ -7,6 +7,7 @@
     groups:
       Acidic: [Touch]
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: MovementSpeedModifier
     baseWalkSpeed : 2
@@ -66,7 +67,7 @@
   - type: NpcFactionMember
     factions:
       - SimpleHostile
-  - type: Damageable
+  - type: Injurable
     damageContainer: StructuralInorganic
 
 - type: entity
@@ -193,6 +194,7 @@
     radius: 2
     energy: 3
     color: "#06DF24"
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
 
 - type: entity
   parent: MobOreCrab
@@ -337,6 +339,7 @@
     radius: 2.0
     energy: 3.5
     color: "#75b1f0" # Edited through the LiquidAnomalySystem
+    mask: /Textures/_ECHO/Effects/LightMasks/circle_b.png # ECHO-Tweak: добавлена маска света
   - type: MobState
     allowedStates:
     - Alive
